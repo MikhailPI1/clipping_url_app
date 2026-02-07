@@ -1,0 +1,12 @@
+[project]
+name = "cut_url_app"
+version = "1.0.0"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pytest",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
