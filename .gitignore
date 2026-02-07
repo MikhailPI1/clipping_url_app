@@ -1,1 +1,3 @@
 venv
+build
+cut_url_app.egg-info

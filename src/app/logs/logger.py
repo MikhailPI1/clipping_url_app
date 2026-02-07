@@ -19,3 +19,20 @@ def logger_calls(func):
             raise
             
     return wrapper
+
+def log_endpoint(func):
+    """Декоратор для логирования FastAPI эндпоинтов"""
+    @wraps(func)
+    async def wrapper(*args, **kwargs):
+        logger.info(f"Calling {func.__name__}")
+
+        try:
+            result = func(*args, **kwargs)
+            logger.info(f"{func.__name__} returned: {result}")
+            return result
+            
+        except Exception as e:
+            logger.error(f"Error in {func.__name__}: {e}")
+            raise
+    
+    return wrapper

@@ -1,10 +1,14 @@
 [project]
 name = "cut_url_app"
-version = "1.0.0"
+version = "0.1.0"
+description = "Сервис сокращения ссылок"
+authors = [{name = "Milhail", email = "mikhail_pivovarov1@mail.ru"}]
+readme = "README.md"
+requires-python = ">=3.12"
 dependencies = [
-    "fastapi",
-    "uvicorn",
-    "pytest",
+    "fastapi==0.104.1",
+    "uvicorn[standard]==0.24.0",
+    "pydantic==1.10.13",
 ]
 
 [build-system]
