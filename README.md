@@ -22,7 +22,6 @@ POST /shorten
 
 Request Body:
 
-json
 ```bash
 {
   "url": "https://example.com/very-long-url",
@@ -30,7 +29,6 @@ json
 }
 ```
 Response:
-json
 ```bash
 {
   "short_code": "abc123",
@@ -48,7 +46,6 @@ GET /urls/{short_code}/info
 
 Response:
 
-json
 ```bash
 {
   "short_code": "abc123",
@@ -64,7 +61,7 @@ GET /urls/all
 Возвращает список всех сокращенных URL в системе.
 
 ## Структура проекта
-text
+```text
 cut_url_app/
 ├── src/
 │   ├── app/
@@ -79,6 +76,7 @@ cut_url_app/
 │   └── utils/
 │       └── utils.py
 └── README.md
+```
 ### Технологии
 FastAPI - асинхронный веб-фреймворк
 
